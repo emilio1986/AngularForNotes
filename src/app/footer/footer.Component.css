@@ -1,0 +1,9 @@
+/* CSS Dedicado al footer que se debe declarar en el componente con la anotacion  -> styleUrls */
+
+.footer{
+
+position: absolute;
+bottom: 0px;
+height: 60px;
+width: 100%;
+}

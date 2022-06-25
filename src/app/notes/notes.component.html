@@ -1,0 +1,30 @@
+<div class="card border-primary mb-3" >
+  <div class="card-header">Notes</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Notes List</h5>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>tittle</th>
+          <th>content</th>
+          <th>createdAt</th>
+          <th>updatedAt</th>
+          <th>archived</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let notes of notes">
+          <td>{{notes.id}}</td>
+          <td>{{notes.tittle}}</td>
+          <td>{{notes.content}}</td>
+          <td>{{notes.createdAt}}</td>
+          <td>{{notes.updatedAt}}</td>
+          <td>{{notes.archived}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
