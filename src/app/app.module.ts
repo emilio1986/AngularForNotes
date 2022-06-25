@@ -6,6 +6,15 @@ import { FooterComponent } from './footer/footer.Component';
 import { DirectivaComponent } from './directiva/directiva.component';
 import { NotesComponent } from './notes/notes.component';
 import { NoteService } from './notes/note.service';
+import { RouterModule, Routes } from '@angular/router';
+
+
+//Routes for Router Links
+const routes: Routes = [
+  { path: '', redirectTo: '/notes', pathMatch: 'full' },
+  { path: 'directivas', component:DirectivaComponent },
+  { path: 'notes', component: NotesComponent },
+];
 
 // Repositorio CONTENEDOR Aca se declaran todos los componentes
 @NgModule({
@@ -15,14 +24,11 @@ import { NoteService } from './notes/note.service';
     FooterComponent,
     DirectivaComponent,
     NotesComponent,
-
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule,RouterModule.forRoot(routes)],
   //Services Inyection
   providers: [NoteService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 //Clase que se carga en el main.ts
-export class AppModule { }
+export class AppModule {}
