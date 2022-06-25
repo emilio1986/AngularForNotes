@@ -7,6 +7,7 @@ import { Observable, of } from 'rxjs';
 export class NoteService {
   constructor() {}
 
+  //Any changes ig Observed by this method and autoActuallized
   getNotes(): Observable<Note[]> {
     return of(NOTES);
   }

@@ -16,6 +16,7 @@ export class NotesComponent implements OnInit {
   constructor(private noteService: NoteService) {}
 
   //initializer method like prePersist
+  //AutoUpdating notesInformation
   ngOnInit() {
     this.noteService.getNotes().subscribe((notes) => (this.notes = notes));
   }
