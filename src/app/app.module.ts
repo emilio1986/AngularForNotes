@@ -7,7 +7,7 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { NotesComponent } from './notes/notes.component';
 import { NoteService } from './notes/note.service';
 import { RouterModule, Routes } from '@angular/router';
-
+import {HttpClientModule} from '@angular/common/http'
 
 //Routes for Router Links
 const routes: Routes = [
@@ -25,7 +25,9 @@ const routes: Routes = [
     DirectivaComponent,
     NotesComponent,
   ],
-  imports: [BrowserModule,RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,HttpClientModule,
+    RouterModule.forRoot(routes)],
   //Services Inyection
   providers: [NoteService],
   bootstrap: [AppComponent],
